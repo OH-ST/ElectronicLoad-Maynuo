@@ -193,5 +193,9 @@ class MaynuoDCLoad( minimalmodbus.Instrument ):
     
     #remaining functions TBC
 
+    def setInputOn(self):
+        self.write_registers(0x0A00, [42])
 
+    def setInputOff(self):
+        self.write_registers(0x0A00, [43])
     	
